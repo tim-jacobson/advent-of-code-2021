@@ -13,7 +13,7 @@ val sample = """199
 
 val inputFile = File("src/main/resources/puzzle/day01/puzzle-day-01-input").readLines().joinToString("\n")
 
-val output = inputFile.split('\n').map(String::toInt).zipWithNext().count { (a, b) -> a < b }
+val output = inputFile.split('\n').map(String::toInt).windowed(3) { it.sum() }.zipWithNext().count { (a, b) -> a < b }
 
 fun main() {
     println(output)
