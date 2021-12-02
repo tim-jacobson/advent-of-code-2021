@@ -1,3 +1,5 @@
+package puzzle.day01
+
 import java.io.File
 
 val sample = """199
